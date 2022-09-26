@@ -9,8 +9,7 @@ namespace SkySwordKill.NextCommandExamplePlugin
     {
         private void Awake()
         {
-            // 注册 CostMoney 事件
-            DialogAnalysis.RegisterCommand("CostMoney",new CostMoneyEvent());
+        
         }
     }
 }

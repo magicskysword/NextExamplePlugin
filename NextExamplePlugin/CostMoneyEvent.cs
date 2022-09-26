@@ -1,9 +1,16 @@
 ﻿using System;
-using SkySwordKill.Next;
 using SkySwordKill.Next.DialogEvent;
+using SkySwordKill.Next.DialogSystem;
 
 namespace SkySwordKill.NextCommandExamplePlugin
 {
+    /// <summary>
+    /// 自定义指令参考范例
+    /// 使用 [DialogEvent("CostMoneyEvent")] 可以将指令标记到对应的名称上
+    /// 在Next初始化时会自动注册
+    /// 也可以使用 <code>DialogAnalysis.RegisterCommand("CostMoney",new CostMoneyEvent());</code> 手动注册
+    /// </summary>
+    [DialogEvent("CostMoneyEvent")]
     public class CostMoneyEvent : IDialogEvent
     {
         public void Execute(DialogCommand command, DialogEnvironment env, Action callback)
